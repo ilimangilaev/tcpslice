@@ -2,6 +2,9 @@
 
 set -e
 
+echo -e "\033[33;1mFailing coverity build\033[0m"
+exit 1
+
 # Environment check
 echo -e "\033[33;1mNote: COVERITY_SCAN_PROJECT_NAME and COVERITY_SCAN_TOKEN are available on Project Settings page on scan.coverity.com\033[0m"
 [ -z "$COVERITY_SCAN_PROJECT_NAME" ] && echo "ERROR: COVERITY_SCAN_PROJECT_NAME must be set" && exit 1
